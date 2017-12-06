@@ -1,0 +1,37 @@
+
+
+<div innerHTML="html">
+	<fieldset>
+		<legend>Object...</legend>
+	<object id="flexId" type="application/x-shockwave-flash" [data]="url" width="100%" height="70%" class="flexView">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+					<param name="allowFullScreen" value="true" />
+					<param name="wmode" value="transparent"/>
+ </object>
+
+
+	</fieldset>
+	<ng-content></ng-content>
+	<fieldset>
+		<legend>Embed Flex App...</legend>
+		<embed id="flexIds" src="Angular_flex_project.swf" style="display:block;">
+	</fieldset>
+</div>
+<div>
+	<fieldset>
+		<legend>Angular App...</legend>
+		<h1>Communication of Angular App with native application</h1>
+		<div>
+			<label>{{currentState}}</label> {{values}}
+		</div>
+		<br/>
+		<div>
+			<button (click)="resetValue()">Reset</button>
+			<button (click)="updateValue()">update</button>
+			<button (click)="reteriveValue()">Value from Service</button>
+			<button (click)="saveValue()">Save to native app</button>
+		</div>
+	</fieldset>
+</div>

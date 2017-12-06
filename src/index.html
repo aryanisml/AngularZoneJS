@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CommunicationApp</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <app-root></app-root>
+    <br/>
+    <fieldset>
+        <legend>Native application...</legend>
+        <button onClick="setflexdata()">Update</button>
+    </fieldset>
+    <fieldset>
+        <legend>Outside component...</legend>
+        <object id="flexId" type="application/x-shockwave-flash" data="Angular_flex_project.swf" width="100%" height="100%">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                
+ </object>
+    </fieldset>
+    <script>
+        function setflexdata() {
+            var passingObj = {};
+            passingObj.values = 'XYZ';
+            window.winNgRef.callBackFunc(passingObj);
+        }
+
+        function shareData() {
+            var flashObject = document.getElementById('flexId');
+            flashObject.showData();
+        }
+    </script>
+</body>
+
+</html>
